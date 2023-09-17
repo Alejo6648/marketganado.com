@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Marketganado.com</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        html, body {
+        overflow-x: hidden;
+        padding: 0;
+        margin: 0;
+        height: 100vh;
+        background: #01939c;
+        }
+    </style>
+</head>
+<body>
+    <!--Barra de navegacion-->
+    <nav class="navegacion-activa">
+        <div class="logo" style="display: flex;align-items: center;">
+        <span style="color:#01939c; font-size:26px; font-weight:bold; letter-spacing: 1px;margin-left: 20px;">Marketganado.com</span>
+        </div>
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <ul class="navegacion-links">
+            <li><a href="#">Principal</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Ofertas</a></li>
+            <li><a href="#">Contactanos</a></li>
+            <li><a href="login.html">Inicia sesión</a></li>
+        </ul>
+    </nav>
+    <!--codigo imagenes con recorrido-->
+    <div class="slider" x-data="{start: true, end: false}" style="padding-top: 150px;">
+        <div class="slider__content" x-ref="slider" x-on:scroll.debounce="$refs.slider.scrollLeft == 0 ? start = true : start = false; Math.abs(($refs.slider.scrollWidth - $refs.slider.offsetWidth) - $refs.slider.scrollLeft) < 5 ? end = true : end = false;">
+        <div class="slider__item">
+            <img class="slider__image" src="./img-videos/01.jpg" alt="Image">
+            <div class="slider__info">
+            <h2>Ganado en venta</h2>
+            </div>
+        </div>
+        <div class="slider__item">
+            <img class="slider__image" src="./img-videos/02.jpg" alt="Image">
+            <div class="slider__info">
+            <h2>Ganado en venta</h2>
+            </div>
+        </div>
+        <div class="slider__item">
+            <img class="slider__image" src="./img-videos/03.jpg" alt="Image">
+            <div class="slider__info">
+            <h2>Ganado en venta</h2>
+            </div>
+        </div>
+        <div class="slider__item">
+            <img class="slider__image" src="./img-videos/04.jpg" alt="Image">
+            <div class="slider__info">
+            <h2>Ganado en venta</h2>
+            </div>
+        </div>
+        <div class="slider__item">
+            <img class="slider__image" src="./img-videos/05.avif" alt="Image">
+            <div class="slider__info">
+            <h2>Ganado en venta</h2>
+            </div>
+        </div>
+        <div class="slider__item">
+            <img class="slider__image" src="./img-videos/06.avif" alt="Image">
+            <div class="slider__info">
+            <h2>Ganado en venta</h2>
+            </div>
+        </div>
+        <div class="slider__item">
+            <img class="slider__image" src="./img-videos/07.jpeg" alt="Image">
+            <div class="slider__info">
+            <h2>Ganado en venta</h2>
+            </div>
+        </div>
+        <div class="slider__item">
+            <img class="slider__image" src="./img-videos/08.jpg" alt="Image">
+            <div class="slider__info">
+            <h2>Ganado en venta</h2>
+            </div>
+        </div>
+        </div>
+        <div class="slider__nav" style="display: flex;justify-content: center;">
+          <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth * -1, behavior: 'smooth'});" x-bind:class="start ? '' : 'slider__nav__button--active'">Atras</button>
+        <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth, behavior: 'smooth'});" x-bind:class="end ? '' : 'slider__nav__button--active'">Siguiente</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.2/cdn.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
