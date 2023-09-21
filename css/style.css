@@ -59,6 +59,20 @@
 .hamburger{
     display: none;
 }
+body div.darkmode {
+    display: inline-block;
+    font-size: 2rem;
+    padding: 1rem 1rem 0.75rem 1rem;
+    cursor: pointer;
+}
+
+body.dark .darkmode .light,
+body:not(.dark) .darkmode .dark {
+    display: none;
+}
+.fa{
+    cursor: pointer;
+}
 
 
 @media screen and (max-width: 800px){

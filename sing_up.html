@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sing up</title>
+    <link rel="stylesheet" href="./css/sing_up.css">
+</head>
+<body style="display: flex; justify-content:center ; align-items: center;height: 100vh;overflow: hidden;">
+        <div class="form-wrap">
+            <div class="tabs">
+                <h3 class="signup-tab"><a class="active" href="login.html" style="border-top-left-radius: 7px; color: black;">Sign Up</a></h3>
+            </div>
+            <div class="tabs-content">
+                <div id="signup-tab-content" class="active">
+                    <form class="signup-form" action="login.html" method="post">
+                        <input type="email" class="input" id="user_email" autocomplete="off" placeholder="Email" required>
+                        <input type="text" class="input" id="user_name" autocomplete="off" placeholder="Usuario" required>
+                        <input type="password" class="input" id="user_pass" autocomplete="off" placeholder="Contraseña" required>
+                        <input type="submit" name="submit" class="button" value="Registrarse">
+                    </form>
+                    <div class="help">
+                        <p>Ya estas registrado?</p>
+                        <p><a href="login.html">Inicia sesion</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="./js/sing_up.js"></script>
+</body>
+</html> 

@@ -10,20 +10,24 @@
 </head>
 <body class="align">
     <div class="grid">
-    <form  method="POST" class="form login">
+        <div class="tabs">
+            <h3 class="signup-tab"><a class="active" href="sing_up.html" style="border-top-left-radius: 7px;">Login</a></h3>
+        </div>
+    <form id="loginForm" method="POST" class="form login">
         <div class="form_field">
         <label><i class="fa fa-user" style="color: #606468;"></i></label>
-        <input type="text" name="username" class="form_input" placeholder="Usuario" required>
+        <input type="text" id="username" name="username" class="form_input" placeholder="Usuario" required>
         </div>
         <div class="form_field">
         <label><i class="fa fa-lock" style="color: #606468;"></i></label>
-        <input type="password" name="password" class="form_input" placeholder="Contraseña" required>
+        <input type="password" id="password" name="password" class="form_input" placeholder="Contraseña" required>
         </div>
         <div class="form_field">
-        <button class="submitButton" type="submit">Iniciar sesion</button>
+        <button class="submitButton" type="submit"><a id="inicio" href="index.html">Iniciar sesion</a></button>
         </div>
     </form>
-    <p class="text--center">No eres mienbro? <a href="#">Registrarte</a></p>
+    <p class="text--center">No eres miembro? <a href="sing_up.html">Registrarte</a></p>
     </div>
+    <script src="./js/login.js"></script>
 </body>
 </html>

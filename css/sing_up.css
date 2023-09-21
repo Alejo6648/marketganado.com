@@ -1,0 +1,96 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,100,200,300);
+* {
+margin: 0;
+padding: 0;
+}
+
+body {
+color: #666;
+background-image: url(../img-videos/pexels-lennard-schubert-17116853.png);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+font: 16px/26px "Raleway", sans-serif;
+}
+a {
+    color: #666;
+    text-decoration: none;
+}
+a:hover {
+    color: #313151;
+}
+input {
+    font: 16px/26px "Raleway", sans-serif;
+    background-color: #434a52;
+}
+.form-wrap {
+width: 400px;
+height: 400px;
+margin: 3em auto;
+border-radius: 7px;
+}
+.form-wrap .tabs {
+overflow: hidden;
+}
+.form-wrap .tabs h3 {
+float: right;
+width: 100%;
+}
+.form-wrap .tabs h3 a {
+padding: 0.5em 0;
+text-align: center;
+font-weight: 700;
+font-size: 1.5rem;
+opacity: 0.8;
+display: block;
+color: #666;
+}
+
+.form-wrap .tabs-content {
+padding: 1.5em;
+}
+.form-wrap .tabs-content div[id$="tab-content"] {
+display: none;
+}
+.form-wrap .tabs-content .active {
+display: block !important;
+}
+.form-wrap form .input {
+box-sizing: border-box;
+-moz-box-sizing: border-box;
+color: #eee;
+font-family: inherit;
+padding: 0.8em 0 10px 0.8em;
+border: 1px solid #cfcfcf;
+outline: 0;
+display: inline-block;
+margin: 0 0 0.8em 0;
+padding-right: 2em;
+width: 100%;
+border-radius: 7px;
+}
+.form-wrap form .button {
+width: 100%;
+padding: 0.8em 0 10px 0.8em;
+background-color: #270cbf;
+border: none;
+color: #fff;
+cursor: pointer;
+text-transform: uppercase;
+border-radius: 7px;
+}
+.form-wrap form .button:hover {
+background-color: #3200e6;
+}
+
+.form-wrap .help {
+margin-top: 0.6em;
+}
+.form-wrap .help p {
+text-align: center;
+font-size: 14px;
+color:#abbaab;
+}
+.form-wrap .help a{
+    color:#abbaab;
+}
