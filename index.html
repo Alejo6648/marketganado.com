@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Marketganado.com</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <style>
         html, body {
@@ -18,7 +19,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
     integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <!--Barra de navegacion-->
@@ -32,8 +32,8 @@
             <div class="line3"></div>
         </div>
         <ul class="navegacion-links">
-            <li><a href="#">Principal</a></li>
-            <li><a href="#">Productos</a></li>
+            <li><a href="#Principal">Principal</a></li>
+            <li><a href="#nuevos">Productos</a></li>
             <li><a href="ofertas.html">Ofertas</a></li>
             <li><a href="contactos.html">Contactanos</a></li>
             <li><a href="login.html">Inicia sesión</a></li>
@@ -44,7 +44,7 @@
         </ul>
     </nav>
     <!--codigo imagenes con recorrido-->
-    <div class="slider" x-data="{start: true, end: false}" style="padding-top: 150px;">
+    <div class="slider" x-data="{start: true, end: false}" style="padding-top: 150px;" id="Principal">
         <div class="slider__content" x-ref="slider" x-on:scroll.debounce="$refs.slider.scrollLeft == 0 ? start = true : start = false; Math.abs(($refs.slider.scrollWidth - $refs.slider.offsetWidth) - $refs.slider.scrollLeft) < 5 ? end = true : end = false;">
         <div class="slider__item">
             <img class="slider__image" src="./img-videos/01.jpg" alt="Image">
@@ -100,7 +100,200 @@
         <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth, behavior: 'smooth'});" x-bind:class="end ? '' : 'slider__nav__button--active'">Siguiente</button>
         </div>
     </div>
+    <article>
+        <section class="carta">
+        <div class="text-content">
+            <h3>Produccion de ganado, como se produce?</h3>
+            <p>La producción de ganado implica el manejo y la cría de animales para la explotación de su carne y otros productos como la leche, los huevos y los cueros. Esta actividad puede realizarse de manera extensiva o intensiva.
+                La ganadería extensiva se realiza al aire libre, aprovechando los recursos medioambientales para la explotación, y es considerada como productora de productos de mayor calidad.
+                Por otro lado, la ganadería intensiva se realiza en establos, buscando la reducción de costes para ser más competitiva, aunque suele producir productos de menor calidad.
+            </p>  
+            <a href="#">Ver mas</a>
+        </div>
+        <div class="visual">
+            <img src="./img-videos/pexels-cottonbro-studio-9906454.jpg" alt="" />
+        </div>
+        </section> 
+    </article>
+    <div class="container">
+
+        <h1 class="titulo" id="nuevos">Nuevos Productos</h1>
+
+        <div class="product-grid">
+            <div class="product-grid__item">
+                <div class="product-grid__imagen">
+                    <img src="./img-videos/pexels-ave-calvar-martinez-3656870.jpg" alt="">
+                </div>
+
+                <div class="product-grid__info">
+                    <p class="product-grid__name">Vaca en venta N° 1</p>
+                    <p class="product-grid__price">$14.00</p>
+
+                    <a href="#" class="product-grid__btn btn-default" data-btn-action="add-btn-cart" data-modal="#jsModalCarrito"  >Comprar</a>
+
+                </div>
+
+            </div>
+
+            <div class="product-grid__item">
+                <div class="product-grid__imagen">
+                    <img src="./img-videos/pexels-leah-kelley-1449656.jpg" alt="">
+                </div>
+
+                <div class="product-grid__info">
+                    <p class="product-grid__name">Vaca en venta N° 2</p>
+                    <p class="product-grid__price">$15.00</p>
+                    <a href="#" class="product-grid__btn btn-default" data-btn-action="add-btn-cart" data-modal="#jsModalCarrito" >Comprar</a>
+                </div>
+
+            </div>
+
+            <div class="product-grid__item">
+                <div class="product-grid__imagen">
+                    <img src="./img-videos/pexels-ave-calvar-martinez-3640086.jpg" alt="">
+                </div>
+
+                <div class="product-grid__info">
+                    <p class="product-grid__name">Vaca en venta N° 3</p>
+                    <p class="product-grid__price">$23.00</p>
+                    <a href="#" class="product-grid__btn btn-default" data-btn-action="add-btn-cart" data-modal="#jsModalCarrito">Comprar</a>
+                </div>
+
+            </div>
+
+            <div class="product-grid__item">
+                <div class="product-grid__imagen">
+                    <img src="./img-videos/pexels-elina-sazonova-1838564.jpg" alt="">
+                </div>
+
+                <div class="product-grid__info">
+                    <p class="product-grid__name">Vaca en venta N° 4</p>
+                    <p class="product-grid__price">$15.50</p>
+                    <a href="#" class="product-grid__btn btn-default" data-btn-action="add-btn-cart" data-modal="#jsModalCarrito">Comprar</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--MODAL CARRITO-->
+        <div class="modal" id="jsModalCarrito">
+            <div class="modal__container">
+                <button type="button" class="modal__close fa-solid fa-xmark jsModalClose "></button>
+
+                <div class="modal__info">
+                    <div class="modal__header">
+                        <h2><i class="fa-solid fa-cart-shopping"></i>Carrito</h2>
+                    </div>
+
+                    <div class="modal__body">
+                        <div class="modal__list">
+                            <div class="modal__item">
+                                <div class="modal__thumb">
+                                    <img src="./img-videos/pexels-ave-calvar-martinez-3656870.jpg" alt="Naranja">
+                                </div>
+                                <div class="modal__text-product">
+                                    <p>Vaca en venta N° 1</p>
+                                    <p><strong>$14.00</strong></p>
+                                </div>
+                            </div>
+
+
+                            <div class="modal__item">
+                                <div class="modal__thumb">
+                                    <img src="./img-videos/pexels-leah-kelley-1449656.jpg" alt="Naranja">
+                                </div>
+                                <div class="modal__text-product">
+                                    <p>Vaca en venta N° 2</p>
+                                    <p><strong>$15.00</strong></p>
+                                </div>
+                            </div>
+
+                            <div class="modal__item">
+                                <div class="modal__thumb">
+                                    <img src="./img-videos/pexels-ave-calvar-martinez-3640086.jpg" alt="Naranja">
+                                </div>
+                                <div class="modal__text-product">
+                                    <p>Vaca en venta N° 3</p>
+                                    <p><strong>$23.00</strong></p>
+                                </div>
+                            </div>
+
+                            <div class="modal__item">
+                                <div class="modal__thumb">
+                                    <img src="./img-videos/pexels-elina-sazonova-1838564.jpg" alt="Naranja">
+                                </div>
+                                <div class="modal__text-product">
+                                    <p>Vaca en venta N° 4</p>
+                                    <p><strong>$15.00</strong></p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="modal__footer">
+                        <div class="modal__list-price">
+                            <ul>
+                                <li>Subtotal: <strong>$67.00</strong></li>
+                                <li>Descuento: <strong>$0.00</strong></li>
+                            </ul>
+                            <h4 class="modal__total-cart"> Total: $67.00</h4>
+                        </div>
+
+                        <div class="modal__btns">
+                            <a href="#" class="btn-border">Ir al carrito</a>
+                            <a href="#" class="btn-primary">Comprar Ahora</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section style="background: black; height: auto;">
+        <div class="container flow-content">
+        <h2 class="section-title">Autor</h2>
+        <ul role="list" class="grid">
+            <li>
+            <article class="card" data-visible="false">
+                <div class="card__front flow-content">
+                <img class="card__img mx-auto" src="./img-videos/WhatsApp Image 2023-09-28 at 12.41.43 AM.jpeg" />
+                <div class="flow-content" data-spacing="sm">
+                    <p class="card__name">Alejandro Ortiz Gomez</p>
+                    <p class="card__position">Web developer</p>
+                </div>
+                </div>
+                <div class="card__back flow-content">
+                <p class="card__name">Alejandro Ortiz Gomez</p>
+                <q>Programador junior, aprendiendo para mejorar, tener conocimiento sobre software.</q>
+                <ul role="list" class="card__social flex-group">
+                    <li>
+                    <a href="#">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    </li>
+                    <li>
+                    <a href="#">
+                        <i class="fa-brands fa-linkedin "></i>
+                    </a>
+                    </li>
+                </ul>
+                </div>
+                <footer class="card__footer">
+                <button data-card-controller class="card__toggle">
+                    <i class="fa-solid fa-plus card__toggle-icon"></i>
+                </button>
+                </footer>
+            </article>
+            </li>
+            <li>
+        </ul>
+        </div>
+    </section>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.2/cdn.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./js/index.js"></script>
+    <script src="./js/productos.js"></script>
 </body>
 </html>
